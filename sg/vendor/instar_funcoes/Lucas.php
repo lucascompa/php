@@ -1,6 +1,6 @@
 <?php 
 
-	class Lucas
+    class Lucas
 	{
 
 		public function __construct()

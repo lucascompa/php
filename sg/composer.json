@@ -1,7 +1,19 @@
 {
+	"name": "lucascompa/php",
+	"authors": [
+		{
+			"name": "Lucas Jose Severino",
+			"email": "lucas@instar.com.br"
+		}
+	],
 	"require": {
 		"slim/slim": "~2.0",
 		"phpmailer/phpmailer":"*",
 		"rain/raintpl": ">=3.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"instar_funcoes\\": "instar_funcoes"
+		}
 	}
 }
