@@ -15,7 +15,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Instar\\": "vendor/instar/"
+			"Instar\\": "instar/"
 		}
 	}
 }

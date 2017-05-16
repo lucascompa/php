@@ -10,7 +10,7 @@
 
     use \Rain\Tpl;
     use \Slim\Slim;
-    //use \Instar\Lucas;
+    use \Instar\Lucas;
     
     $lucas = new \Instar\Lucas();
 
@@ -19,13 +19,13 @@
         "cache_dir" => "viewscache/"
     );
     
-    Tpl::configure( $config );
+    \Rain\Tpl::configure( $config );
 
 	$app = new \Slim\Slim();
 
     $app->get('/', function() {
         
-        $t = new Tpl;
+        $t = new \Rain\Tpl;
         
         //$dados['usNome'] = "Lucas";
         //$dados['usEmail'] = "Lucas@instar.com.br";
