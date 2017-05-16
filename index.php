@@ -6,18 +6,19 @@
 
     set_error_handler(error_handler);
 
-	require_once "sg/vendor/autoload.php";
+	require_once "sg/vendorclasses/autoload.php";
 
     use \Rain\Tpl;
     use \Slim\Slim;
+    //use \Instar\Lucas;
     
-    $lucas = new \instar_funcoes\Lucas();
-
+    $lucas = new \Instar\Lucas();
 
     $config = array(
-                     "tpl_dir"       => "views/",
-                     "cache_dir"     => "viewscache/"
+        "tpl_dir" => "views/",
+        "cache_dir" => "viewscache/"
     );
+    
     Tpl::configure( $config );
 
 	$app = new \Slim\Slim();
@@ -37,12 +38,12 @@
                 ["usNome" => "Lucas", "usEmail" => "lucas@instar.com.br"],
                 ["usNome" => "Muriele", "usEmail" => "murieledaiane@gmail.com"]
             )
-            );
+        );
 
         $admin = array(
             array("login" => "lucas", "senha" => "1234"),
             array("login" => "muri", "senha" => "1234")
-            );
+        );
 
         $t->assign('title','Hello Instar');
         $t->assign($dados);
